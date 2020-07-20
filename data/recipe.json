@@ -2,13 +2,11 @@
   "version": 1,
   "layers": {
     "county": {
-      "source": "mapbox://tileset-source/USER_NAME/us-counties",
+      "source": "mapbox://tileset-source/thirdhiker/us-counties",
       "minzoom": 1,
       "maxzoom": 16,
       "features": {
-        "id": {
-          "attribute_id": "GEOID"
-        },
+        "id": [ "get", "GEOID" ],
         "filter": [
           "match",
           ["to-string", ["get", "STATE_NAME"]],
